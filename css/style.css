@@ -1,0 +1,332 @@
+/* --- Global & Typography --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  background-color: #212121; /* Charcoal Black */
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 1.1em;
+}
+
+.navbar a:hover {
+  color: #ff9900; /* Vibrant Orange */
+}
+
+/* --- Hero Section & Carousel --- */
+.hero {
+  position: relative;
+  height: 400px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out; /* Slower, smoother fade */
+}
+
+.hero-logo {
+  max-width: 300px;
+  margin-bottom: 1rem;
+  z-index: 10; /* Ensure logo is on top */
+}
+
+/* --- Countdown Clock --- */
+#countdown {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  z-index: 10; /* Ensure countdown is on top */
+}
+
+/* --- Content & Headings --- */
+h1, h2, h3 {
+  color: #212121;
+  border-bottom: 3px solid #ff9900;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* --- Donation Tiers --- */
+.donation-tiers {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.tier-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tier-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #ff9900;
+}
+
+.price {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #005a9c;
+  margin: 10px 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #218838;
+}
+
+/* --- Forms & Buttons --- */
+form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #ff9900;
+  color: #212121;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+input[type="submit"]:hover {
+  background-color: #e68a00;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 1px solid #eaeaea;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.social-links a {
+  color: #005a9c;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* --- Homepage Specifics --- */
+.text-center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.25em;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+}
+
+.button.large {
+  font-size: 1.5em;
+  padding: 15px 35px;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  margin: 50px 0;
+}
+
+.email-capture {
+  text-align: center;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.email-capture input[type="email"] {
+  width: 60%;
+  padding: 12px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* --- Donation Page Specifics --- */
+.transparency-note {
+  font-size: 0.9em;
+  color: #666;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 5px solid #ff9900;
+  margin-top: 30px;
+}
+
+.shipping-option {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+  width: 60%;
+  max-width: 400px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .donation-tiers {
+    flex-direction: column;
+  }
+
+  .tier-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* --- Modern Buttons & Links --- */
+.button, input[type="submit"] {
+  display: inline-block;
+  background: linear-gradient(to bottom, #ff9900, #e68a00); /* Gradient for depth */
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Shadow for "lift" */
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  cursor: pointer;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.button:hover, input[type="submit"]:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.button.secondary {
+  background: linear-gradient(to bottom, #6c757d, #5a6268);
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+/* --- Custom Donation Section --- */
+.custom-donation {
+  text-align: center;
+  margin-top: 40px;
+}
