@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrinBound - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="donate.html">Donate Materials</a> | <a href="donate-legal.html">Fund Our Foundation</a> | <a href="contact.html">Contact</a>
+    <a href="subscribe.html">Subscribe</a>
+  </nav>
+
+  <div class="hero" id="hero-carousel">
+    <img src="assets/images/logo.png" alt="GrinBound Logo" class="hero-logo">
+    <div id="countdown"></div>
+  </div>
+
+  <div class="container">
+    <main class="text-center">
+      <h1>GrinBound turns a simple hat into a lasting friendship.</h1>
+      <p class="lead">We bridge the social divide for children with special needs through the shared joy of creation. Learn how a simple act of collaborative art can change lives.</p>
+      <a href="about.html" class="button large">Read Our Story</a>
+    </main>
+
+    <hr class="section-divider">
+
+    <section class="email-capture">
+      <h2>Join Our Community</h2>
+      <p>Get updates on our progress, see the impact of your support, and be the first to know when we achieve our 501(c)(3) status. No spam, just hope.</p>
+      <form action="#" method="post">
+        <input type="email" name="email" placeholder="Enter your email address" required>
+        <input type="submit" value="Stay Informed">
+      </form>
+    </section>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61569772464372" target="_blank" title="Facebook" style="text-decoration:none;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+      </div>
+      <p>&copy; 2025 GrinBound. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // --- Countdown Clock Logic ---
+    const countDownDate = new Date("Sep 2, 2025 08:00:00").getTime();
+    const countdownElement = document.getElementById("countdown");
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdownElement.innerHTML = "WELCOME BACK TO SCHOOL!";
+      }
+    }, 1000);
+
+    // --- Hero Carousel Logic ---
+    const heroElement = document.getElementById('hero-carousel');
+    const images = [
+      'assets/images/hero-image-1.png',
+      'assets/images/hero-image-2.png',
+      'assets/images/hero-image-3.png'
+    ];
+    let currentImage = 0;
+
+    function changeBackgroundImage() {
+      heroElement.style.backgroundImage = 'url(' + images[currentImage] + ')';
+      currentImage = (currentImage + 1) % images.length;
+    }
+
+    setInterval(changeBackgroundImage, 8000); // Change image every 8 seconds
+    changeBackgroundImage(); // Initial call
+  </script>
+
+</body>
+</html>
